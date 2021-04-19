@@ -5,45 +5,45 @@ using namespace std;
 
 
 int main() {
-    string filename = "./text.txt";
-    ofstream outfile(filename, ios::out);
+    string filename = "./text1.txt";
+    ofstream outfile(filename, ios::app);
 
     if(!outfile.is_open()) {
         cerr << "File " << filename << " not open correctly!\n";
     }
 
-    outfile << "Hello there!";
+    outfile << "Hello the";
     outfile.put('k');
     
-    cout << outfile.tellp() << "\n";
+    // cout << outfile.tellp() << "\n";
 
-    outfile.seekp(5);
+    // outfile.seekp(5);
 
-    outfile << "one";
+    // outfile << "one";
 
-    cout << outfile.tellp() << "\n";
+    // cout << outfile.tellp() << "\n";
 
     outfile.close();
 
-    ifstream infile;
-    infile.open(filename, ios::in);
+    // ifstream infile;
+    // infile.open(filename, ios::in);
 
-    if(!infile.is_open()) {
-        cerr << "File " << filename << " not open correctly!\n";
-    }
+    // if(!infile.is_open()) {
+    //     cerr << "File " << filename << " not open correctly!\n";
+    // }
 
-    string input;
+    // string input;
 
-    char ch;
-    while(infile.get(ch)) {
-        input.append(1,ch);        
-    }
+    // char ch;
+    // while(infile.get(ch)) {
+    //     input.append(1,ch);        
+    // }
 
-    cout << input << "\n";
+    // cout << input << "\n";
 
-    cout << infile.tellg() << "\n";
+    // cout << infile.tellg() << "\n";
 
-    infile.close();
+    // infile.close();
 
 
 

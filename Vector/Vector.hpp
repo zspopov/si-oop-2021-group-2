@@ -6,7 +6,7 @@ using namespace std;
 
 template <typename T>
 class Vector {
-private:
+protected:
     T * vector;
     int size;
     int capacity;
@@ -96,11 +96,9 @@ void Vector<T>::resize() {
 template <typename T>
 void Vector<T>::print() const {
     for(int i = 0; i < this->size; i++) {
-        cout << this->vector[i] << " ";
+        cout << this->vector[i];
     }
 }
-
-
 
 
 #endif//VECTOR_H
