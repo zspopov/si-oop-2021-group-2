@@ -12,11 +12,13 @@ private:
 public:
     Account(const string & accountID);
 
-    double getBalance() const;
+    virtual double getBalance() const;
 
-    void deposit(double amount);
-    bool withdraw(double amount);
-    virtual void print() const;
+    virtual void deposit(double amount);
+    virtual bool withdraw(double amount);
+    virtual void print() const = 0;
+
+    virtual ~Account() = default;
 };
 
 #endif//ACCOUNT_H

@@ -1,3 +1,7 @@
+#ifndef DEPOSIT_ACCOUNT_H
+#define DEPOSIT_ACCOUNT_H
+
+
 #include "Account.hpp"
 
 class DepositAccount : public Account {
@@ -6,3 +10,6 @@ public:
     DepositAccount(const string& accountID, double instrest);
     void print() const;  
 };
+
+
+#endif
