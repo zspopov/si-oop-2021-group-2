@@ -18,7 +18,11 @@ public:
     virtual bool withdraw(double amount);
     virtual void print() const = 0;
 
-    virtual ~Account() = default;
+    virtual Account * clone() const = 0;
+
+    virtual ~Account() {
+        cout << "~Account()\n";
+    }
 };
 
 #endif//ACCOUNT_H

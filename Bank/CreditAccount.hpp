@@ -11,6 +11,12 @@ public:
     CreditAccount(const string & accountID, double intrest);
     void deposit(double amount);
     virtual void print() const;
+
+    Account * clone() const;    
+
+    ~CreditAccount() {
+        cout << "~CreditAccount()\n";
+    }
 };
 
 #endif//CREDIT_ACCOUNT_H

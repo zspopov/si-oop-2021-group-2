@@ -9,6 +9,12 @@ class DepositAccount : public Account {
 public:
     DepositAccount(const string& accountID, double instrest);
     void print() const;  
+
+    Account * clone() const;
+
+    ~DepositAccount() {
+        cout << "~DepositAccount()\n";
+    }
 };
 
 
