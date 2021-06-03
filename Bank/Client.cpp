@@ -45,10 +45,8 @@ void Client::print() const {
 
 void Client::printDepositAccount() const {
     for (auto account : this->accounts) {
-        if (!::castable<Account, UltraDepositAccount>(account) && ::castable<Account, DepositAccount>(account)) {
-            DepositAccount * da = ::castable<Account, DepositAccount>(account);
-            da->print();
-            cout << "\n";
+        if (account->getType() == AccountType::DEPOSIT_ACCOUNT) {
+            account->print();
         }
     }
 }

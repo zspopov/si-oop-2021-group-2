@@ -1,7 +1,7 @@
 #include "DepositAccount.hpp"
 
 DepositAccount::DepositAccount(const string& accountID, double instrest)
-            : Account(accountID) , intrest(instrest) {}
+            : Account(accountID, AccountType::DEPOSIT_ACCOUNT) , intrest(instrest) {}
 
 Account * DepositAccount::clone() const {
     return new DepositAccount(*this);

@@ -1,9 +1,13 @@
 #include "Account.hpp"
 
-Account::Account(const string & accountID) : accountID(accountID) , balance(0) {}
-
+Account::Account(const string & accountID, const AccountType& type) : accountID(accountID) , balance(0) , type(type) {}
+ 
 double Account::getBalance() const {
     return this->balance;
+}
+
+AccountType Account::getType() const {
+    return this->type;
 }
 
 void Account::deposit(double amount) {

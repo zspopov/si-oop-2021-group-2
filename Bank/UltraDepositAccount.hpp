@@ -1,6 +1,7 @@
 #ifndef ULTRA_DEPOSIT_ACCOUNT
 #define ULTRA_DEPOSIT_ACCOUNT
 
+#include "Account.hpp"
 #include "DepositAccount.hpp"
 
 class UltraDepositAccount : public DepositAccount {
